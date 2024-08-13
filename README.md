@@ -1,4 +1,4 @@
-# Experiment automation of running models in inferences in InstructLab or  watsonx
+# Experiment automation for models on inferences in InstructLab or watsonx
 
 ## Objective
 

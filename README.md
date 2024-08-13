@@ -1,6 +1,6 @@
 # Experiment automation for models on inferences in InstructLab or watsonx
 
-## Objective
+## 1. Objective
 
 The objective is to run tests against models running in the inference of the InstructLab and watsonx using the REST APIs.
 
@@ -17,14 +17,14 @@ Questions are input parameters to use the models in a question-answering use cas
 
 > Note: You can find the currently supported foundation models for InstructLab on the [InstructLab-compatible foundation models page](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-instructlab.html?context=wx&locale=tr).
 
-## Setup and Architecture
+## 2. Setup and Architecture
 
 Here is a simplified overview of the input, output, and configuration of the text framework:
 
 * We use a Phyton application with command line parameters to invoke the REST API for watsonx and InstructLab to send all questions.
 * We use shell scripts to save various configurations to invoke the Python application.
 
-### 1. Python application
+### 2.1. Python application
 
 * Input: Excel file with a `question` column 
 * Output: Excel file with the columns.
@@ -59,7 +59,7 @@ export INSTRUCTLAB_PROMPT_FILE="$(pwd)/prompts/prompt-clean.txt"
 export INSTRUCTLAB_MAX_NEW_TOKENS=300
 ```
 
-### 1. Shell automation
+### 2.1. Shell automation
 
 The following code is the content for a shell script to run the test against a model on watsonx. We define the model and the prompt file, set the proper input parameters, and specify the output location and file name.
 
@@ -91,4 +91,4 @@ echo "# 4. Run experiment"
 python3 run_experiment.py --inputfile ${RUN_INPUT_FILENAME} --outputfile ${RUN_OUTPUT_FILENAME} --inference ${RUN_INFERENCE}
 ```
 
-### 2. [Setup README](/code/README.md)
+### 2.3. [Setup README](/code/README.md)

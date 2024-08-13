@@ -1,0 +1,19 @@
+# IBM Cloud
+export IBMCLOUD_APIKEY=
+export IBMCLOUD_URL="https://iam.cloud.ibm.com/identity/token"
+
+# Watsonx
+export WATSONX_URL="https://us-south.ml.cloud.ibm.com/ml/v1/text/generation"
+export WATSONX_VERSION=2023-05-29
+export WATSONX_PROJECT_ID=XXXXXX
+
+export WATSONX_MIN_NEW_TOKENS=1
+export WATSONX_MAX_NEW_TOKENS=300
+
+export WATSONX_LLM_NAME=ibm/granite-13b-chat-v2
+export WATSONX_PROMPT_FILE="$(pwd)/prompts/prompt-granite.txt"
+
+# InstructLab
+export INSTRUCTLAB_URL="http://127.0.0.1:8000/v1/completions"
+export INSTRUCTLAB_PROMPT_FILE="$(pwd)/prompts/prompt-clean.txt"
+export INSTRUCTLAB_MAX_NEW_TOKENS=300
